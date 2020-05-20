@@ -29,6 +29,6 @@ public class ValidateBinarySearchTree {
         root.right = new TreeNode(8);
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(9);
-        System.out.println(new DivideTwoIntegers().isValidBST(root));
+        System.out.println(new ValidateBinarySearchTree().isValidBST(root));
     }
 }

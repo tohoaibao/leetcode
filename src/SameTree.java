@@ -16,6 +16,6 @@ public class SameTree {
         root2.left = new TreeNode(2);
         root2.right = new TreeNode(3);
 
-        System.out.println(new DivideTwoIntegers().isSameTree(root1, root2));
+        System.out.println(new SameTree().isSameTree(root1, root2));
     }
 }

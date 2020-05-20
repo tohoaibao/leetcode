@@ -17,6 +17,6 @@ public class SingleElementInASortedArray {
 
     public static void main(String[] args) {
         int nums[] = {1,3,3,7,7,11,11};
-        System.out.println(new DivideTwoIntegers().singleNonDuplicate(nums));
+        System.out.println(new SingleElementInASortedArray().singleNonDuplicate(nums));
     }
 }

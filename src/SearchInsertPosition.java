@@ -23,6 +23,6 @@ public class SearchInsertPosition {
 
     public static void main(String[] args) {
         int nums[] =  {1, 3, 5, 7};
-        System.out.println(new DivideTwoIntegers().searchInsert(nums, 2));
+        System.out.println(new SearchInsertPosition().searchInsert(nums, 2));
     }
 }
