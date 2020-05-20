@@ -1,4 +1,4 @@
-public class Solution {
+public class SameTree {
 
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) return true;
@@ -16,6 +16,6 @@ public class Solution {
         root2.left = new TreeNode(2);
         root2.right = new TreeNode(3);
 
-        System.out.println(new Solution().isSameTree(root1, root2));
+        System.out.println(new DivideTwoIntegers().isSameTree(root1, root2));
     }
 }

@@ -1,4 +1,4 @@
-public class Solution {
+public class ValidateBinarySearchTree {
 
     public boolean isValidBST(TreeNode root) {
         return isValidBST(root, null, null);
@@ -29,6 +29,6 @@ public class Solution {
         root.right = new TreeNode(8);
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(9);
-        System.out.println(new Solution().isValidBST(root));
+        System.out.println(new DivideTwoIntegers().isValidBST(root));
     }
 }

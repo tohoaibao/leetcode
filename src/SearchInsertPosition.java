@@ -1,4 +1,4 @@
-public class Solution {
+public class SearchInsertPosition {
 
     public int searchInsert(int[] nums, int target) {
         return searchInsert(nums, target, 0, nums.length - 1);
@@ -23,6 +23,6 @@ public class Solution {
 
     public static void main(String[] args) {
         int nums[] =  {1, 3, 5, 7};
-        System.out.println(new Solution().searchInsert(nums, 2));
+        System.out.println(new DivideTwoIntegers().searchInsert(nums, 2));
     }
 }

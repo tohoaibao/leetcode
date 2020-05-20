@@ -1,4 +1,4 @@
-public class Solution {
+public class DivideTwoIntegers {
 
     /*
      divide two integers without using multiplication, division and mod operator.
@@ -36,6 +36,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().divide(47, 3));
+        System.out.println(new DivideTwoIntegers().divide(47, 3));
     }
 }

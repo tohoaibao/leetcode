@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Solution {
+public class Permutations {
 
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
@@ -34,7 +34,7 @@ public class Solution {
 
     public static void main(String[] args) {
         int nums[] = {1,2,3};
-        List<List<Integer>> result = new Solution().permute(nums);
+        List<List<Integer>> result = new DivideTwoIntegers().permute(nums);
         for (List<Integer> list: result) {
             System.out.println(Arrays.toString(new List[]{list}));
         }

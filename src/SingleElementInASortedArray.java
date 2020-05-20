@@ -1,4 +1,4 @@
-public class Solution {
+public class SingleElementInASortedArray {
 
     public int singleNonDuplicate(int[] nums) {
         int n = nums.length;
@@ -17,6 +17,6 @@ public class Solution {
 
     public static void main(String[] args) {
         int nums[] = {1,3,3,7,7,11,11};
-        System.out.println(new Solution().singleNonDuplicate(nums));
+        System.out.println(new DivideTwoIntegers().singleNonDuplicate(nums));
     }
 }
