@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Solution {
+class LongPressedName {
 
     public boolean isLongPressedName(String name, String typed) {
 
@@ -52,6 +52,6 @@ class Solution {
 
     public static void main(String[] args) {
         String name = "alex", typed = "aaleex";
-        System.out.println(new Solution().isLongPressedName(name, typed));
+        System.out.println(new LongPressedName().isLongPressedName(name, typed));
     }
 }
