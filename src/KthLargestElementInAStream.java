@@ -1,11 +1,11 @@
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-class Solution {
+class KthLargestElementInAStream {
     Queue<Integer> pq;
     int k;
 
-    public Solution(int k, int[] nums) {
+    public KthLargestElementInAStream(int k, int[] nums) {
         pq = new PriorityQueue<>();
         this.k = k;
         for (int num: nums) {
@@ -26,7 +26,7 @@ class Solution {
     public static void main(String[] args) {
         int k = 3;
         int[] arr = {4,5,8,2};
-        Solution kthLargest = new Solution(3, arr);
+        KthLargestElementInAStream kthLargest = new KthLargestElementInAStream(3, arr);
         System.out.println(kthLargest.add(3));
         System.out.println(kthLargest.add(5));
         System.out.println(kthLargest.add(10));
