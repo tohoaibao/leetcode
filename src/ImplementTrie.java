@@ -1,9 +1,9 @@
-class Trie {
+class ImplementTrie {
 
     private TrieNode root;
 
     /** Initialize your data structure here. */
-    public Trie() {
+    public ImplementTrie() {
         root = new TrieNode();
     }
 
@@ -82,7 +82,7 @@ class Trie {
     }
 
     public static void main(String[] args) {
-        Trie obj = new Trie();
+        ImplementTrie obj = new ImplementTrie();
         obj.insert("apple");
         obj.insert("app");
         boolean param_2 = obj.search("apple");
