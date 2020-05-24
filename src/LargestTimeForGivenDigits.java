@@ -1,5 +1,5 @@
 
-public class Solution {
+public class LargestTimeForGivenDigits {
 
     public String largestTimeFromDigits(int[] A) {
         int ans = -1;
@@ -24,6 +24,6 @@ public class Solution {
 
     public static void main(String[] args) {
         int A[] = {5,1,5,3};
-        System.out.println(new Solution().largestTimeFromDigits(A));
+        System.out.println(new LargestTimeForGivenDigits().largestTimeFromDigits(A));
     }
 }
