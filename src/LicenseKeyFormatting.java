@@ -7,7 +7,7 @@ class LicenseKeyFormatting {
         for (int i = n - 1; i >= 0; i--) {
             char c = S.charAt(i);
             if (c != '-') {
-                sb.append(sb.length() % (K + 1) == K ? '-' : "").append(S.charAt(i));
+                sb.append(sb.length() % (K + 1) == K ? '-' : "").append(c);
             }
         }
         return sb.reverse().toString().toUpperCase();
