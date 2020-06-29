@@ -45,7 +45,7 @@ public class MergeTwoSortedLists {
             curr = curr.next;
         }
 
-        ListNode list2 = new ListNode(A1[0]);
+        ListNode list2 = new ListNode(A2[0]);
         curr = list2;
         for (int i = 1; i < A2.length; i++) {
             curr.next = new ListNode(A2[i]);
