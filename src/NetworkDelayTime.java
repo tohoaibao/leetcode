@@ -5,6 +5,7 @@ import java.util.Map;
 
 class NetworkDelayTime {
 
+    // https://leetcode.com/problems/network-delay-time/
     Map<Integer, Integer> dist;
     public int networkDelayTime(int[][] times, int N, int K) {
         Map<Integer, List<int[]>> graph = new HashMap<>();
