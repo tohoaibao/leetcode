@@ -4,14 +4,11 @@ class NumberOfEquivalentDominoPairs {
     public int numEquivDominoPairs(int[][] dominoes) {
         int[] count = new int[100];
         int num;
+        int ans = 0;
         for (int[] d : dominoes) {
             num = Math.min(d[0], d[1])*10 + Math.max(d[0],d[1]);
+            ans += count[num];
             count[num]++;
-        }
-
-        int ans = 0;
-        for (int v : count) {
-            ans += v*(v-1)/2;
         }
 
         return ans;
