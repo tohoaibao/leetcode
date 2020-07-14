@@ -29,6 +29,8 @@ class CombinationSum {
         int candidates[] = {2,3,5};
         int target = 8;
         List<List<Integer>> res = new CombinationSum().combinationSum(candidates, target);
-        System.out.println();
+        for (List<Integer> lst : res) {
+            System.out.println(Arrays.toString(lst.toArray()));
+        }
     }
 }

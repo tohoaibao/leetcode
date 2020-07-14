@@ -30,6 +30,8 @@ class CombinationSumII {
         int candidates[] = {10,1,2,7,6,1,5};
         int target = 8;
         List<List<Integer>> res = new CombinationSumII().combinationSum2(candidates, target);
-        System.out.println();
+        for (List<Integer> lst : res) {
+            System.out.println(Arrays.toString(lst.toArray()));
+        }
     }
 }
