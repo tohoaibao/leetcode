@@ -2,22 +2,14 @@ class DetectCapital {
 
     // https://leetcode.com/problems/detect-capital/
     public boolean detectCapitalUse(String word) {
-        int n = word.length();
-        // All letters in this word are not capitals
-        if (Character.isLowerCase(word.charAt(0))) {
-            for (int i = 1; i < n; i++) {
-                if (!Character.isLowerCase(word.charAt(i))) return false;
-            }
-            return true;
-        }
-        // All letters in this word are capitals
-        int count = 1;
-        for (int i = 1; i < n; i++) {
-            if (!Character.isLowerCase(word.charAt(i))) {
-                count++;
+        int n = word.length(), caps = 0;
+        for (int i = 0; i < n; i++) {
+            if (Character.isUpperCase(word.charAt(i))){
+                caps++;
             }
         }
-        return count == n || count == 1;
+        if (caps == word.length() || caps == 0) return true;
+        return caps == 1 && Character.isUpperCase(word.charAt(0));
     }
 
     public static void main(String[] args) {
