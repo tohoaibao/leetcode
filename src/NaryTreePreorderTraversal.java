@@ -23,6 +23,7 @@ import java.util.List;
 
 class NaryTreePreorderTraversal {
 
+    // https://leetcode.com/problems/n-ary-tree-preorder-traversal/
     public List<Integer> preorder(Node root) {
         List<Integer> res = new ArrayList<>();
         preorder(root, res);
