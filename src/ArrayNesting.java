@@ -14,6 +14,22 @@ class ArrayNesting {
         return max;
     }
 
+    public int arrayNesting2(int[] nums) {
+        boolean[] visited = new boolean[nums.length];
+        int maxLen = Integer.MIN_VALUE;
+        for (int e : nums) {
+            int currLen = 0;
+            while (!visited[e]) {
+                currLen++;
+                visited[e] = true;
+                e = nums[e];
+            }
+            maxLen = Math.max(maxLen, currLen);
+        }
+
+        return maxLen;
+    }
+
     public static void main(String[] args) {
         int[] nums = {5,4,0,3,1,6,2};
         System.out.println(new ArrayNesting().arrayNesting(nums));
