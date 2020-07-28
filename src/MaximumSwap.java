@@ -3,21 +3,22 @@ class MaximumSwap {
     // https://leetcode.com/problems/maximum-swap/
     public int maximumSwap(int num) {
         char[] digits = String.valueOf(num).toCharArray();
-        int[] buckets = new int[10];
         int n = digits.length;
         for (int i = 0; i < n; i++) {
-            buckets[digits[i] - '0'] = i;
-        }
-
-        for (int i = 0; i < n; i++) {
-            for (int k = 9; k > digits[i] - '0'; k--) {
-                if (buckets[k] > i) {
-                    // swap digits[i] vs digits[buckets[k]]
-                    char tmp = digits[i];
-                    digits[i] = digits[buckets[k]];
-                    digits[buckets[k]] = tmp;
-                    return Integer.parseInt(String.valueOf(digits));
+            int maxI = i + 1;
+            boolean flag = false;
+            for (int j = maxI; j < n; j++) {
+                if (digits[j] > digits[i] && digits[j] >= digits[maxI]) {
+                    maxI = j;
+                    flag = true;
                 }
+            }
+            if (flag) {
+                // swap digits[i] vs digits[maxI]
+                char tmp = digits[i];
+                digits[i] = digits[maxI];
+                digits[maxI] = tmp;
+                return Integer.parseInt(String.valueOf(digits));
             }
         }
 
