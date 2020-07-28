@@ -29,6 +29,24 @@ class TopKFrequentWords {
         return res;
     }
 
+    public List<String> topKFrequent2(String[] words, int k) {
+        Map<String, Integer> map = new HashMap<>();
+        for (String w : words) {
+            map.put(w, map.getOrDefault(w, 0) + 1);
+        }
+        List<String> list = new ArrayList<>(map.keySet());
+        Collections.sort(list, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                int v1 = map.get(o1);
+                int v2 = map.get(o2);
+                return v1 != v2 ? v2 - v1 : o1.compareTo(o2);
+            }
+        });
+
+        return list.subList(0, k);
+    }
+
     public static void main(String[] args) {
         String[] A = {"i", "love", "leetcode", "i", "love", "coding"};
 //        String[] A = {"the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"};
