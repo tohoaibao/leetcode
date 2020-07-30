@@ -1,4 +1,6 @@
 class FindPivotIndex {
+
+    // https://leetcode.com/problems/find-pivot-index/
     public int pivotIndex(int[] nums) {
         int sum = 0;
         for (int num : nums) {
