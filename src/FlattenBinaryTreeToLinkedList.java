@@ -3,6 +3,7 @@ class FlattenBinaryTreeToLinkedList {
 
     private TreeNode prev = null;
 
+    // https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
     public void flatten(TreeNode root) {
         if (root == null) return;
         flatten(root.right);
