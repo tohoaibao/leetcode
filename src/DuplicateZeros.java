@@ -1,6 +1,24 @@
 import java.util.Arrays;
 
 class DuplicateZeros {
+
+    public void duplicateZeros2(int[] arr) {
+        int j = arr.length;
+        for (int i = 0; i < arr.length; ++i) {
+            if (arr[i]==0) {
+                j++;
+            }
+        }
+        for (int i = arr.length - 1; i >=0; --i) {
+            if (--j < arr.length) {
+                arr[j] = arr[i];
+            }
+            if (arr[i]==0 && --j < arr.length) {
+                arr[j] = 0;
+            }
+        }
+    }
+
     public void duplicateZeros(int[] arr) {
         int len = arr.length;
         for (int i = 0; i < arr.length; ++i) {
