@@ -1,4 +1,6 @@
 class PrimeArrangements {
+
+    // https://leetcode.com/problems/prime-arrangements/
     public int numPrimeArrangements(int n) {
         int x = countPrimes(n);
         long ans = 1;
