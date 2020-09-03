@@ -1,15 +1,15 @@
 public class MaximumSubarray {
 
+    // https://leetcode.com/problems/maximum-subarray/
     public int maxSubArray(int[] nums) {
-        int n = nums.length;
-        int sum = nums[0];
-        int max = nums[0];
-        for (int i = 1; i < n; i++) {
-            sum = Math.max(sum + nums[i], nums[i]);
-            max = Math.max(max, sum);
+        int sum = Integer.MIN_VALUE, ans = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+            //Kadane's Algorithm
+            sum = Math.max(0, sum) + nums[i];
+            ans = Math.max(ans, sum);
         }
 
-        return max;
+        return ans;
     }
 
     public static void main(String[] args) {
