@@ -15,6 +15,19 @@ class RemoveAllAdjacentDuplicatesInStringII {
         return sb.toString();
     }
 
+    public String removeDuplicates2(String s, int k) {
+        char[] chars = s.toCharArray();
+        int[] count = new int[s.length()];
+        int i = 0;
+        for (int j = 0; j < s.length(); ++j, ++i) {
+            chars[i] = chars[j];
+            count[i] = 1 + (i > 0 && chars[i-1]==chars[j] ? count[i-1] : 0);
+            if (count[i]==k) i-=k;
+        }
+
+        return new String(chars, 0, i);
+    }
+
     public static void main(String[] args) {
         String s = "deeedbbcccbdaa";
         int k = 3;
