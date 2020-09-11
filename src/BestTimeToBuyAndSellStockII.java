@@ -1,11 +1,11 @@
 
 public class BestTimeToBuyAndSellStockII {
 
+    // https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
     public int maxProfit(int[] prices) {
         int n = prices.length;
         int i = 0;
-        int valley = prices[0];
-        int peak = prices[0];
+        int valley, peak;
         int maxProfit = 0;
 
         while (i < n - 1) {
@@ -25,7 +25,8 @@ public class BestTimeToBuyAndSellStockII {
 
 
     public static void main(String[] args) {
-        int prices[] = {7,1,5,3,6,4};
+//        int prices[] = {7,1,5,3,6,4};
+        int prices[] = {1, 7, 2, 3, 6, 7, 6, 7};
         System.out.println(new BestTimeToBuyAndSellStockII().maxProfit(prices));
     }
 }
