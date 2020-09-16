@@ -26,6 +26,17 @@ class PositionsOfLargeGroups {
         return ans;
     }
 
+    public List<List<Integer>> largeGroupPositions2(String s) {
+        List<List<Integer>> ans = new ArrayList<>();
+        for (int i = 0, j = 0; i < s.length(); i = j) {
+            while (j < s.length() && s.charAt(j) == s.charAt(i)) j++;
+            if (j - i >= 3) {
+                ans.add(Arrays.asList(i, j - 1));
+            }
+        }
+        return ans;
+    }
+
     public static void main(String[] args) {
         String S = "abcdddeeeeaabbbcd";
 //        S = "abc";
